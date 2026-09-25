@@ -27,8 +27,10 @@
           alt="logo-tripple-expresso"
         />
         <ul class="nav-links">
-          <li><a href="#reservas">Reserva una mesa</a></li>
-          <li><a href="#contactos">Contactos</a></li>
+          <li>
+            <a href="#reservas" class="nav-links__list">Reserva una mesa</a>
+          </li>
+          <li><a href="#contactos" class="nav-links__list">Contactos</a></li>
         </ul>
       </nav>
 
@@ -57,10 +59,76 @@
 
     <!--Contenido Principal-->
     <main class="content">
-      <section></section>
+      <form class="form">
+        <h2 class="title__main">Reserva una mesa</h2>
+        <div class="form__container">
+          <label for="name" class="form__label">Nombre</label>
+          <input
+            type="text"
+            placeholder="Nombre"
+            id="name"
+            class="form__input"
+            maxlength="75"
+            minlength="2"
+          />
+
+          <label for="number" class="form__label">Número de comensales</label>
+          <input
+            type="number"
+            placeholder="1-8"
+            id="number"
+            class="form__input"
+            min="1"
+            max="8"
+          />
+
+          <label for="day" class="form__label">Fecha y hora</label>
+          <input type="date" id="day" class="form__input" />
+
+          <label for="mail" class="form__label">Tu correo electrónico</label>
+          <input
+            type="email"
+            placeholder="email@email.com"
+            id="mail"
+            class="form__input"
+          />
+        </div>
+        <button class="button__submit">Reservar una mesa</button>
+
+        <div class="form__checkbox">
+          <input type="checkbox" class="input__checkbox" id="checkbox" />
+          <label for="checkbox">Acepto los términos de uso</label>
+        </div>
+      </form>
     </main>
 
     <!--Pie de Página-->
-    <footer class="footer"></footer>
+    <footer class="footer">
+      <div class="footer__circulo"></div>
+      <nav class="footer__container">
+        <img
+          src="./images/logo_coffeeshop_light.svg"
+          alt="logo-tripple-expresso-light"
+          class="footer__image"
+        />
+
+        <ul class="footer__ul">
+          <li class="footer__list">
+            <p class="footer__paragraph">Redes sociales</p>
+            <a href="#facebook" class="footer-social__media">
+              <img src="./images/facebook_white.svg" alt="facebook logo" />
+              Facebook</a
+            >
+          </li>
+          <li class="footer__list">
+            <a href="#instagram" class="footer-social__media">
+              <img src="./images/instagram_white.svg" alt="instagram logo" />
+              Instagram</a
+            >
+          </li>
+        </ul>
+      </nav>
+      <p class="footer__copyright">© 2026 Tu nombre</p>
+    </footer>
   </body>
 </html>
